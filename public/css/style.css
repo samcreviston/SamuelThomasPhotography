@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  /* Header font */
+  --header-font: "Playfair Display", serif;
+
+  /* Paragraph fonts (Lato variants) */
+  --paragraph-thin-normal: "Lato", sans-serif;
+  --paragraph-light-normal: "Lato", sans-serif;
+  --paragraph-regular-normal: "Lato", sans-serif;
+  --paragraph-bold-normal: "Lato", sans-serif;
+
+  --paragraph-thin-italic: "Lato", sans-serif;
+  --paragraph-light-italic: "Lato", sans-serif;
+  --paragraph-regular-italic: "Lato", sans-serif;
+  --paragraph-bold-italic: "Lato", sans-serif;
+}
+
+/* 
+  Italic available for both fonts
+  Lato font-weight key:
+  100 = Thin
+  300 = Light
+  400 = Regular
+  700 = Bold
+*/
+
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-family: var(--paragraph-regular-italic);
+    font-size: .64rem;
+    font-style: italic;
+}
+
+nav p {
+    font-style: italic;
+}
