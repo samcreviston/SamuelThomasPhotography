@@ -42,6 +42,47 @@ p {
     font-style: italic;
 }
 
+#navbar {
+  padding-top: 6px;
+  display: flex;
+  justify-content: space-around;
+}
+
 nav p {
     font-style: italic;
+
+    margin-top: 0px;
+}
+
+main {
+
+}
+
+#hero-images {
+  width: 100vw;             /* full viewport width */
+  height: 250px;            /* container height */
+  overflow: hidden;         /* hides excess images */
+  display: flex;            /* horizontal layout */
+  justify-content: center;  /* center content horizontally */
+  align-items: center;      /* center content vertically */
+  box-sizing: border-box;   /* avoid extra width issues */
+  margin: 0;
+  padding: 0;
+}
+
+#hero-images img {
+  height: 100%;    /* all images same height as container */
+  width: auto;     /* scale width proportionally */
+  object-fit: cover; /* ensures cropping if needed */
+  flex-shrink: 0;  /* prevent shrinking when flex container is smaller */
+
+}
+
+#hero-logo {
+  position: absolute;
+  top: 37.5%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* adjust for element's own size */
+  max-height: 87.5px;
+  z-index: 2;
 }
