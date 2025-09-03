@@ -1,0 +1,48 @@
+html {
+  line-height: 1.15; /* fix inconsistent line-height */
+  -webkit-text-size-adjust: 100%;/* prevent font scaling in landscape on iOS */
+}
+
+body {
+  margin: 0; /* remove default margin */
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Make headings consistent */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset lists */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Links inherit color */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images scale down nicely */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inputs and buttons inherit font */
+button, input, textarea, select {
+  font: inherit;
+  margin: 0;
+}
+
+/* Box sizing for consistency */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
