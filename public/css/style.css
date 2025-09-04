@@ -64,7 +64,8 @@ li {
 }
 
 #section-title {
-
+ text-align: center;
+ margin-top: 20px;
 }
 
 
@@ -115,3 +116,25 @@ li {
 }
 
 /****** PHOTOSHOOT SECTION *****/
+.ps-card {
+  text-align: center;
+  margin: 20px 60px;
+}
+
+.ps-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.ps-images-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ps-images-column img {
+  max-width: 100%;
+  border-radius: 4px;
+  max-height: 100px;
+  object-fit: contain;
+}

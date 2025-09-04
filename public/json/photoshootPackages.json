@@ -1,6 +1,11 @@
 [
   {
     "category": "Family",
+    "images": [
+      "https://placehold.net/600x400.png",
+      "https://placehold.net/400x600.png",
+      "https://placehold.net/600x400.png"
+    ],
     "packages": [
       {
         "name": "Basic Essentials",
