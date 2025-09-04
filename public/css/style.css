@@ -46,6 +46,7 @@ p {
   padding-top: 6px;
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
 
 nav p {
@@ -70,11 +71,13 @@ main {
   padding: 0;
 }
 
-#hero-images img {
+#hero-images img:not(:last-child)  {
   height: 100%;    /* all images same height as container */
   width: auto;     /* scale width proportionally */
   object-fit: cover; /* ensures cropping if needed */
   flex-shrink: 0;  /* prevent shrinking when flex container is smaller */
+  opacity: 0;      /* initial opacity */
+  transition: opacity 0.75s; /* fade transition */
 
 }
 
@@ -84,5 +87,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%); /* adjust for element's own size */
   max-height: 87.5px;
+
+  opacity: 1;
   z-index: 2;
 }
