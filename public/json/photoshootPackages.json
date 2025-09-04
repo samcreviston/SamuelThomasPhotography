@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Family",
+    "packages": [
+      {
+        "name": "Basic Essentials",
+        "price": 40,
+        "features": [
+          "3 unique family photos",
+          "1 of each: Parents, Siblings, other special requests",
+          "2 unique portraits of each individual"
+        ]
+      },
+      {
+        "name": "Standard Collection",
+        "price": 40,
+        "features": [
+          "6 unique family photos",
+          "3 of each: Parents, Siblings, other special requests",
+          "3 unique portraits of each individual"
+        ]
+      },
+      {
+        "name": "The Grand Collection",
+        "price": 40,
+        "features": [
+          "10 unique family photos",
+          "5 of each: Parents, Siblings, other special requests",
+          "5 unique portraits of every individual"
+        ]
+      }
+    ]
+  }
+]

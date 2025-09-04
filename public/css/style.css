@@ -59,6 +59,16 @@ main {
 
 }
 
+li {
+  font-size: .675rem;
+}
+
+#section-title {
+
+}
+
+
+/****** HERO *****/
 #hero-images {
   width: 100vw;             /* full viewport width */
   height: 250px;            /* container height */
@@ -91,3 +101,17 @@ main {
   opacity: 1;
   z-index: 2;
 }
+
+
+/****** PROGRESS *****/
+#progress-section-steps {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 60px;
+}
+
+.progress-arrow {
+  max-height: 15px;
+}
+
+/****** PHOTOSHOOT SECTION *****/
