@@ -18,7 +18,7 @@
       },
       {
         "name": "Standard Collection",
-        "price": 40,
+        "price": 75,
         "features": [
           "6 unique family photos",
           "3 of each: Parents, Siblings, other special requests",
@@ -26,8 +26,8 @@
         ]
       },
       {
-        "name": "The Grand Collection",
-        "price": 40,
+        "name": "Legacy Album",
+        "price": 120,
         "features": [
           "10 unique family photos",
           "5 of each: Parents, Siblings, other special requests",
@@ -35,5 +35,117 @@
         ]
       }
     ]
+  },
+  {
+    "category": "Individual",
+    "images": [
+      "https://placehold.net/600x400.png",
+        "https://placehold.net/400x600.png",
+        "https://placehold.net/600x400.png"
+    ],
+    "packages": [
+      {
+        "name": "Milestone Media Post",
+        "price": 40,
+        "features": [
+          "5 professional photos",
+          "25-minute photoshoot",
+          ""
+        ]
+      },
+      {
+        "name": "Signature Success Story",
+        "price": 70,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "Lasting Celebration Legacy",
+        "price": 110,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Group & Event",
+    "images": [
+      "",
+      "",
+      ""
+    ],
+    "packages": [
+      {
+        "name": "",
+        "price": 0,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "",
+        "price": 0,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "",
+        "price": 0,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Business",
+    "images": [
+      "",
+      "",
+      ""
+    ],
+    "packages": [
+      {
+        "name": "",
+        "price": 0,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "",
+        "price": 0,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "",
+        "price": 0,
+        "features": [
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
   }
 ]
+

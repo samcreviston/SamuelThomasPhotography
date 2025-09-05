@@ -70,6 +70,10 @@ li {
 
 
 /****** HERO *****/
+#hero {
+  position: relative;
+}
+
 #hero-images {
   width: 100vw;             /* full viewport width */
   height: 250px;            /* container height */
@@ -88,13 +92,13 @@ li {
   object-fit: cover; /* ensures cropping if needed */
   flex-shrink: 0;  /* prevent shrinking when flex container is smaller */
   opacity: 0;      /* initial opacity */
-  transition: opacity 0.75s; /* fade transition */
+  transition: opacity 0.7s; /* fade transition */
 
 }
 
 #hero-logo {
   position: absolute;
-  top: 37.5%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* adjust for element's own size */
   max-height: 87.5px;
@@ -137,4 +141,10 @@ li {
   border-radius: 4px;
   max-height: 100px;
   object-fit: contain;
+}
+
+.ps-option-description {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: circle;
 }
