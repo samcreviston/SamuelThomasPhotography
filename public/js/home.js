@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   images.forEach((img, index) => {
     setTimeout(() => {
       img.style.opacity = 1;
-    }, index * 750);  // staggered by 0.75s each
+    }, index * 400);  // staggered by 0.75s each
   });
 });
 
@@ -35,19 +35,15 @@ function renderPhotoshootCards(dataArray, containerId) {
     card.classList.add("ps-card");
     card.id = `ps-${category.category.toLowerCase()}`;
 
-    // Grid wrapper
-    const grid = document.createElement("div");
-    grid.classList.add("ps-card-grid");
-
-    // Images column
-    const imagesCol = document.createElement("div");
-    imagesCol.classList.add("ps-images-column");
+    // Images row (flex)
+    const imagesRow = document.createElement("div");
+    imagesRow.classList.add("ps-images-row");
 
     category.images.forEach(path => {
       const img = document.createElement("img");
       img.src = path;
       img.alt = `${category.category} photoshoot`;
-      imagesCol.appendChild(img);
+      imagesRow.appendChild(img);
     });
 
     // Options section
@@ -79,10 +75,9 @@ function renderPhotoshootCards(dataArray, containerId) {
       optionsSection.appendChild(optionDiv);
     });
 
-    // Build hierarchy
-    grid.appendChild(imagesCol);
-    grid.appendChild(optionsSection);
-    card.appendChild(grid);
+    // Build hierarchy (images first, then options)
+    card.appendChild(imagesRow);
+    card.appendChild(optionsSection);
     container.appendChild(card);
   });
 }
