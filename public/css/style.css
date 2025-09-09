@@ -35,6 +35,10 @@ h1, h2, h3 {
     font-style: normal;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 h3 {
     font-size: 1.25rem;
 }
@@ -112,7 +116,7 @@ header{
 }
 
 
-#section-title {
+.section-title {
  text-align: center;
  margin-top: 20px;
 }
@@ -150,10 +154,17 @@ header{
   grid-template-columns: 1fr 3fr;
 }
 
+.ps-category-title {
+  padding-bottom: 16px;
+  margin: 0px 250px;
+  border-bottom: 2px solid #ccc;
+}
+
 .ps-images-row {
   display: flex;
   justify-content: center; /* centers images horizontally */
   gap: 30px;
+  margin-top: 20px;
   margin-bottom: 16px;
 }
 
@@ -174,3 +185,4 @@ header{
 .ps-option-description li {
   margin: 20px;
 }
+

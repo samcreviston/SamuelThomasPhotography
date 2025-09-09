@@ -35,6 +35,11 @@ function renderPhotoshootCards(dataArray, containerId) {
     card.classList.add("ps-card");
     card.id = `ps-${category.category.toLowerCase()}`;
 
+    // Category heading
+    const categoryHeading = document.createElement("h3");
+    categoryHeading.classList.add("ps-category-title");
+    categoryHeading.textContent = category.category;
+
     // Images row (flex)
     const imagesRow = document.createElement("div");
     imagesRow.classList.add("ps-images-row");
@@ -75,12 +80,14 @@ function renderPhotoshootCards(dataArray, containerId) {
       optionsSection.appendChild(optionDiv);
     });
 
-    // Build hierarchy (images first, then options)
+    // Build hierarchy: heading → images → options
+    card.appendChild(categoryHeading);
     card.appendChild(imagesRow);
     card.appendChild(optionsSection);
     container.appendChild(card);
   });
 }
+
 
 // Load and render once DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
