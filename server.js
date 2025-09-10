@@ -13,13 +13,20 @@ const aboutRoute = require("./routes/aboutRoute")
 app.set("view engine", "ejs")
 
 /* ***********************
+ * Middleware to make API key available in all views
+ *************************/
+app.use((req, res, next) => {
+  res.locals.GoogleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY
+  next()
+})
+
+/* ***********************
  * Routes
  *************************/
 app.use(static)
 // Index route
 app.get("/", baseController.buildHome)
 app.get("/about", aboutRoute)
-
 
 /* ***********************
  * Local Server Information

@@ -93,4 +93,111 @@ function renderPhotoshootCards(dataArray, containerId) {
 document.addEventListener("DOMContentLoaded", async () => {
   const data = await fetchPhotoshootData();
   renderPhotoshootCards(data, "photoshoot-container");
+
+  // Initialize dropdown functionality
+  initializeDropdowns();
+
+  // Set up scroll detection for auto-opening first section
+  setupScrollDetection();
 });
+
+// Dropdown functionality
+function initializeDropdowns() {
+  const dropdownButtons = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const targetWrapper = document.getElementById(targetId + '-wrapper');
+
+      if (targetWrapper.classList.contains('open')) {
+        // Close
+        targetWrapper.style.maxHeight = '0px';
+        targetWrapper.classList.remove('open');
+        this.classList.remove('active');
+      } else {
+        // Open
+        targetWrapper.style.maxHeight = targetWrapper.scrollHeight + 'px';
+        targetWrapper.classList.add('open');
+        this.classList.add('active');
+      }
+    });
+  });
+}
+
+// Scroll detection for auto-opening first section
+function setupScrollDetection() {
+  const firstSection = document.getElementById('photoshoot-container-wrapper');
+  const firstSectionHeader = document.querySelector('.section-header');
+  let hasOpened = false;
+
+  function checkScroll() {
+    if (hasOpened) return;
+
+    const rect = firstSectionHeader.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Check if the header is in viewport (with some buffer)
+    if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) {
+      firstSection.style.maxHeight = firstSection.scrollHeight + 'px';
+      firstSection.classList.add('open');
+      hasOpened = true;
+
+      // Also activate the button
+      const button = firstSectionHeader.querySelector('.dropdown-toggle');
+      if (button) {
+        button.classList.add('active');
+      }
+
+      // Remove scroll listener after first trigger
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+
+  // Initial check in case already in viewport
+  checkScroll();
+
+  // Add scroll listener
+  window.addEventListener('scroll', checkScroll);
+}
+
+// function to initialize Google map
+let map;
+let currentMarker;
+
+function initMap() {
+  // Create the map
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 39.8283, lng: -98.5795 }, // Center of USA
+    zoom: 4,
+  });
+
+  // Attach event listeners to location list items
+  const locationItems = document.querySelectorAll("#location-list li");
+  locationItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const lat = parseFloat(item.getAttribute("data-lat"));
+      const lng = parseFloat(item.getAttribute("data-lng"));
+      const position = { lat, lng };
+
+      // Remove previous marker if exists
+      if (currentMarker) {
+        currentMarker.setMap(null);
+      }
+
+      // Add new marker
+      currentMarker = new google.maps.Marker({
+        position,
+        map,
+        title: item.textContent,
+      });
+
+      // Recenter map
+      map.setCenter(position);
+      map.setZoom(10);
+    });
+  });
+}
+
+// Expose initMap for Google Maps API callback
+window.initMap = initMap;
