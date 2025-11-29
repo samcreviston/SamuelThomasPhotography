@@ -246,11 +246,24 @@ header{
   height: 500px; /* or whatever height you need */
 }
 
+.scheduler-section-title {
+  text-align: center;
+  padding-bottom: 16px;
+  margin: 20px 250px 16px 250px;
+  border-bottom: 2px solid #ccc;
+}
+
 #location-list {
-  flex: 1; /* 1/3 of the space */
+  flex: 1; /* 1/4 of the space */
   background: var(--base-background-color);
   padding: 1rem;
   overflow-y: auto;
+}
+
+.location-list-title {
+  padding: 0.5rem;
+  border-bottom: 1px solid #000;
+  font-size: .675rem;
 }
 
 #location-list ul {
@@ -269,7 +282,14 @@ header{
 }
 
 #map {
-  flex: 2; /* 2/3 of the space */
+  flex: 2; /* 2/4 of the space */
   width: 100%;
   height: 100%;
+}
+
+#location-photos {
+  flex: 1; /* 1/4 of the space */
+  background: var(--base-background-color);
+  padding: 1rem;
+  overflow-y: auto;
 }
